@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(#00000059, #00000066), url("../img/bg.png") no-repeat center center / cover;
+    min-height: 100vh;
+}
+
+hr {
+    margin-bottom: 8px;
+}
+
+input:focus,
+button:focus {
+    outline: 0;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    padding: 25px 0;
+}
+
+.container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 6px;
+}
+
+nav ul li a {
+    color: #fff;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover,
+a.active {
+    background-color: #3352F2;
+    border-radius: 5px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 70px;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.booking-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 5px;
+    float: left;
+}
+
+.booking-form h3 {
+    margin: 10px 0px;
+}
+
+.booking-form .input-group {
+    margin: 10px 0;
+}
+
+.f-class {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+.input-wrapper {
+    width: calc(100% - 90px);
+}
+
+.plus-minus-btn button {
+    color: #3352F2;
+    font-size: 30px;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.plus-minus-btn button:first-child {
+    background: #26db8a;
+    margin-right: 10px;
+}
+
+.plus-minus-btn button:last-child {
+    background: #f05f2a;
+}
+
+.booking-form .calculations {
+    margin: 10px 0;
+}
+
+.booking-form .calculations p {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.booking-form input {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #F3F5FF;
+    border-radius: 4px;
+    margin: 10px 0 0;
+}
+
+.booking-form .inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.booking-content {
+    color: #fff;
+    width: 80%;
+}
+
+.booking-content h1 {
+    font-size: 70px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.btn-style {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    background-color: #3352F2;
+    cursor: pointer;
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Booking Popup */
+
+#booking-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+#booking {
+    background: #fff;
+    max-width: 350px;
+    width: 95%;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: .3s;
+    box-shadow: 0 10px 30px #ffffff33;
+}
+
+#booking__img--box {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: -50px auto 0;
+    border: 5px solid #fff;
+}
+
+#booking__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#booking__content {
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#booking__title {
+    color: #26db8a;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#booking__description {
+    margin: 20px 0;
+    color: #8a8a8a;
+    line-height: 1.4;
+}
+
+#booking-popup--close {
+    background: #f05f2a;
+    font-size: 16px;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
